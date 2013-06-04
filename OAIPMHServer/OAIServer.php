@@ -757,6 +757,10 @@ class OAIServer {
                 {
                     # retrieve content for field
                     $Content = $Item->GetValue($LocalFieldName);
+                    
+                    # SE for DECS
+                    if($LocalFieldName == 987654)
+                        $Content = explode(" , ", $Content);
 
                     # retrieve qualifiers for content
                     $Qualifier = $Item->GetQualifier($LocalFieldName);
