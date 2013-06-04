@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer
+END
+Format--oai_dc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/Format--oai_dc.xml
+END
+XSD.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/XSD.php
+END
+HelpOai.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/HelpOai.html
+END
+EditFormat.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/EditFormat.php
+END
+POAIItemFactory.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/POAIItemFactory.php
+END
+OAIServer.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/OAIServer.php
+END
+OAIPMHServer.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/OAIPMHServer.php
+END
+POAIItem.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/POAIItem.php
+END
+OAI.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/OAI.php
+END
+EditFormat.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/EditFormat.html
+END
+EditConfig.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/EditConfig.php
+END
+NamespaceToXSDMap.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/NamespaceToXSDMap.php
+END
+POAIServer.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/POAIServer.php
+END
+Format--nsdl_dc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/Format--nsdl_dc.xml
+END
+EditConfig.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/cwis/!svn/ver/1/tags/2.2.3/plugins/OAIPMHServer/EditConfig.html
+END

@@ -1,0 +1,110 @@
+<?PHP  PageTitle("OAI-PMH Server - Configuration");  ?>
+<?PHP
+# convenience functions
+function pv($Value) {  print(htmlspecialchars($Value));  }
+function pc($Setting) {  print($Setting ? " checked" : "");  }
+function pe($MatchVal, $CurrVal) {  print(($CurrVal == $MatchVal) ? " checked" : "");  }
+?>
+
+<div class="content">
+<div style="float:right;"><a href="index.php?P=P_OAIPMHServer_HelpOai">(Need Help?)</a></div>
+<h1>OAI-PMH Server - Configuration</h1>
+
+
+<?PHP  if (isset($G_ErrorMessages)) {  ?>
+<div class="ErrorBox"></ul>
+    <?PHP  foreach ($G_ErrorMessages as $Msg) {  ?>
+    <li><?PHP  print($Msg);  ?></li>
+    <?PHP  }  ?>
+</ul></div>
+<?PHP  }  ?>
+
+<form method="POST" action="index.php?P=P_OAIPMHServer_EditConfig">
+<table class="ConfigTable" cellspacing="0" cellpadding="5" width="100%">
+    <tr><th colspan="3">Repository Description</th></tr>
+    <tr>
+        <td><b>Repository Name:</b></td>
+        <td colspan="2"><input type="text" name="F_RepDescr_Name" value="<?PHP
+                @pv($G_RepDescr["Name"]);  ?>" size="24" maxlength="80" /></td>
+    </tr>
+    <tr>
+        <td><b>Base URL:</b></td>
+        <td colspan="2"><input type="text" name="F_RepDescr_BaseURL" value="<?PHP
+                @pv($G_RepDescr["BaseURL"]);  ?>" size="64" maxlength="80" /></td>
+    </tr>
+    <tr>
+        <td><b>Administrator Email:</b></td>
+        <td colspan="2"><input type="text" name="F_RepDescr_AdminEmail" value="<?PHP
+                @pv($G_RepDescr["AdminEmail"][0]);  ?>" size="24" maxlength="80" /></td>
+    </tr>
+    <tr>
+        <td><b>ID Domain:</b></td>
+        <td colspan="2"><input type="text" name="F_RepDescr_IDDomain" value="<?PHP
+                @pv($G_RepDescr["IDDomain"]);  ?>" size="24" maxlength="80" /></td>
+    </tr>
+    <tr>
+        <td><b>ID Prefix:</b></td>
+        <td colspan="2"><input type="text" name="F_RepDescr_IDPrefix" value="<?PHP
+                @pv($G_RepDescr["IDPrefix"]);  ?>" size="24" maxlength="80" /></td>
+    </tr>
+    <tr>
+        <td><b>Date Granularity:</b></td>
+        <td colspan="2">
+            <input type="radio" name="F_RepDescr_DateGranularity" value="DATE"
+                    <?PHP  pe("DATE", $G_RepDescr["DateGranularity"]);  ?> />Date
+            <input type="radio" name="F_RepDescr_DateGranularity" value="DATETIME"
+                    <?PHP  pe("DATETIME", $G_RepDescr["DateGranularity"]);
+                    ?> />Date+Time
+        </td>
+
+    </tr>
+    <tr>
+        <td><b>Earliest Date:</b></td>
+        <td colspan="2"><input type="text" name="F_RepDescr_EarliestDate" value="<?PHP
+                pv($G_RepDescr["EarliestDate"]);  ?>" size="16" maxlength="16" /></td>
+    </tr>
+    <tr><th colspan="3">Options</th></tr>
+    <tr>
+        <td><b>OAI-SQ Support:</b></td>
+        <td colspan="2">
+            <input type="radio" name="F_SQEnabled" value="1"
+                    <?PHP  pc($G_SQEnabled);  ?> />Enabled
+            <input type="radio" name="F_SQEnabled" value="0"
+                    <?PHP  pc(!$G_SQEnabled);  ?> />Disabled
+        </td>
+    </tr>
+    <tr><th colspan="3">Formats</th></tr>
+    <?PHP
+    $Index = 0;
+    foreach ($G_Formats as $FormatName => $Format)
+    {
+    ?>
+    <tr>
+        <td>
+            <b><?PHP  pv($FormatName);  ?></b>
+            <input type="hidden" name="H_FormatName<?PHP  print($Index);
+                    ?>" value="<?PHP  pv($FormatName);  ?>">
+        </td>
+        <td><i>
+            <?PHP
+            print(
+                    count($Format["Namespaces"])." namespaces, "
+                    .count($Format["Elements"])." elements, "
+                    .count($Format["Qualifiers"])." qualifiers"
+                    );
+            ?>
+        </i></td>
+        <td align="right"><input type="submit" name="FormatEdit<?PHP
+                print($Index);  ?>" value="Edit" /></td>
+    </tr>
+    <?PHP
+        $Index++;
+    }
+    ?>
+</table>
+<input type="submit" name="Submit" value="Save Changes" />
+<input type="submit" name="Submit" value="Add Format" />
+<input type="submit" name="Submit" value="Cancel" />
+</form>
+
+</div>
