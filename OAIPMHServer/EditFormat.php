@@ -192,9 +192,11 @@ if (isset($_POST["H_FormatName"]))
     # if user requested to save changes to format and no errors found
     if (($_POST["Submit"] == "Save Changes") && !isset($G_ErrorMessages))
     {
-	die(print_r($FormatName));
         SaveChanges($Format, $FormatName);
+    } else {
+        die(print_r($FormatName));
     }
+
 
     # take action based on which button was clicked
     switch ($_POST["Submit"])
