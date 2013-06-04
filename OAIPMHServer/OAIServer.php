@@ -758,7 +758,7 @@ class OAIServer {
                     # retrieve content for field
                     $Content = $Item->GetValue($LocalFieldName);
                     
-                    # SE for DECS
+                    # SE for DECS explode, transformando em array
                     if($LocalFieldName == 987654)
                         $Content = explode(" , ", $Content);
 
